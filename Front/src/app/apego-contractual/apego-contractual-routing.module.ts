@@ -24,7 +24,15 @@ const routes: Routes = [
       {
         path: 'contrato-modal-carga',
         loadComponent: () => import('./contratos/modal-contrato/modal-contrato.component')
-      }
+      },
+      {
+        path: 'anexo-alta',
+        loadComponent: () => import('./anexo-tecnico/alta-anexo/alta-anexo.component')
+      },
+      {
+        path: 'contrato-desglose',
+        loadComponent: () => import('./contratos/desglose-contrato/desglose-contrato.component')
+      },
     ]
   }
 ];

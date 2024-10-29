@@ -1,0 +1,76 @@
+.header_page{
+    background-color: #95ABB6;
+    color:white;
+    height: 66px;
+    text-align: center;
+     
+}
+
+.titulo{
+    font-weight: bold;
+    font-style: normal;
+    font-size: 24px;
+
+}
+.subtitulo{
+    font-weight: bold;
+    font-style: normal;
+    font-size: 19px;
+    
+}
+
+.cuadro{
+    height: 207px;
+    background-color: #95ABB6;
+    width: 211px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.header_cuadro{
+    // margin: auto;
+    background-color: #092241;
+    height: 54px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+   // font-family: "Source Sans Pro";
+    font-style: normal;
+    //align-items: center;
+    
+}
+.vertical_align{
+  
+}
+.imagen{
+    height: 70px;
+    width: 70px;
+}
+.div_imagen{
+    position: relative;
+    left: 33%;
+    top: 15%;
+}
+.div_button{
+    margin-top: 55px;
+}
+.div_button_Verificado{
+    background-color: #5CB85C;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    width: 119px;
+    height: 20px;
+    border-radius: 7px;
+}
+.div_button_falta{
+    background-color:#F0AD4E;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    width: 119px;
+    height: 20px;
+    border-radius: 7px;
+}

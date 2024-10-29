@@ -5,14 +5,16 @@
       <div class="b-bg">
         <i class="feather icon-trending-up"></i>
       </div>
-      <span class="b-title">Datta Able</span>
+      <span class="b-title">Apego Contractual</span>
     </a>
   </div>
   <a class="mobile-menu" [ngClass]="{ on: this.menuClass }" id="mobile-header" href="javascript:" (click)="toggleMobOption()">
     <i class="feather icon-more-horizontal"></i>
   </a>
-  <div class="collapse navbar-collapse" [style.display]="this.collapseStyle">
+  <div class="collapse navbar-collapse header_style"  [style.display]="this.collapseStyle">
     <!-- <app-nav-left class="me-auto" [style.display]="this.headerStyle"></app-nav-left> -->
-    <app-nav-right class="ms-auto"></app-nav-right>
+  <span class="titulo_header">Sistema de Apego Contractual</span>
+ <div style="margin-left: auto;margin-right: 0px; "><app-breadcrumbs></app-breadcrumbs> </div>
+    <!-- <app-nav-right class="ms-auto"></app-nav-right> -->
   </div>
 </header>

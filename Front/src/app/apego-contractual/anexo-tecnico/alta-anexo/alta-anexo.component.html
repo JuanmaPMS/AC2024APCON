@@ -1,0 +1,25 @@
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title"><b>Carga de anexo Técnico</b></h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+        <div class="center">
+            <p>He notado que no hay un Anexo Técnico cargado, para poder desglosar el contrato en su totalidad por fvaor carga un anexo técnico</p>
+            <ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)"
+            (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+                <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+                  Arrastrar hasta aquí
+                  <br>
+                </ng-template>
+            </ngx-file-drop>
+
+        </div>
+	</div>
+
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-secondary" (click)="modal.close('Cancelar')">Cancelar</button>
+    <button type="button" class="btn btn-outline-secondary" (click)="modal.close('Cargar')">Cargar manualmente</button>
+    <button type="button" class="btn btn-outline-secondary" (click)="modal.close('Procesar')">Procesar</button>
+	</div>
+</ng-template>

@@ -1,10 +1,10 @@
 @for (breadcrumb of navigationList; track breadcrumb; let last = $last) {
   @if (last && breadcrumb.breadcrumbs !== false) {
-    <div class="page-header">
-      <div class="page-block">
+    <div class="page-header ">
+      <div class="page-block ">
         <div class="row align-items-center">
           <div class="col-md-12">
-            <div class="page-header-title">
+            <!-- <div class="page-header-title">
               @for (breadcrumb of navigationList; track breadcrumb; let last = $last) {
                 @if (last) {
                   <h5 class="m-b-10">
@@ -12,24 +12,38 @@
                   </h5>
                 }
               }
-            </div>
-            <ul class="breadcrumb">
-              <li class="breadcrumb-item">
+            </div> -->
+            <span><a class="router_style" [routerLink]="['/dashboard']">Home</a></span>
+            @for (breadcrumb of navigationList; track breadcrumb) {
+              @if (breadcrumb.url !== false) {
+                <span><a class="router_style" [routerLink]="breadcrumb.url">>> {{ breadcrumb.title }}</a></span>
+                  
+               
+              }
+              @if (breadcrumb.url === false) {
+                
+                  
+                  <span><a class="router_style" href="javascript:">>> {{ breadcrumb.title }}</a></span>
+                
+              }
+            }
+            <!-- <ul class="breadcrumb router_style">
+              <li class="link_header">
                 <a [routerLink]="['/dashboard']">Home</a>
               </li>
               @for (breadcrumb of navigationList; track breadcrumb) {
                 @if (breadcrumb.url !== false) {
-                  <li class="breadcrumb-item">
+                  <li class="link_header">
                     <a [routerLink]="breadcrumb.url">{{ breadcrumb.title }}</a>
                   </li>
                 }
                 @if (breadcrumb.url === false) {
-                  <li class="breadcrumb-item">
+                  <li class="link_header">
                     <a href="javascript:">{{ breadcrumb.title }}</a>
                   </li>
                 }
               }
-            </ul>
+            </ul> -->
           </div>
         </div>
       </div>
