@@ -23,7 +23,7 @@
     height: 207px;
     background-color: #95ABB6;
     width: 211px;
-    margin: 0 auto;
+   // margin: 0 auto;
     margin-top: 25px;
 }
 .header_cuadro{
@@ -37,6 +37,9 @@
    // font-family: "Source Sans Pro";
     font-style: normal;
     //align-items: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
     
 }
 .vertical_align{
@@ -74,3 +77,11 @@
     height: 20px;
     border-radius: 7px;
 }
+
+.grid-container{
+   display: grid;
+ grid-template-columns: repeat(auto-fit,211px);
+ gap: 15px;
+ justify-content: center;
+}
+
