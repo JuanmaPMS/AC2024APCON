@@ -1,0 +1,168 @@
+{
+    "clientes": [
+        {
+            "id": 1,
+            "descripcion": "AIFA"
+        },
+        {
+            "id": 2,
+            "descripcion": "AICM"
+        },
+        {
+            "id": 3,
+            "descripcion": "IMSS"
+        },
+        {
+            "id": 4,
+            "descripcion": "SEGOB"
+        }
+    ],
+    "contratos": [
+        {
+            "id": 1,
+            "identificador": "PME-AIFA-2024-01",
+            "descripcion": "Establecimiento de los términos y condiciones bajo los cuales el proveedor se obliga a prestar los servicios solicitados por PME",
+            "vigencia": 2024,
+            "idCliente": 1,
+            "cliente": "AIFA",
+            "verificado": false,
+            "activo": true
+        },
+        {
+            "id": 2,
+            "identificador": "PME-AIFA-2024-06",
+            "descripcion": "Establecimiento de los términos y condiciones bajo los cuales el proveedor se obliga a prestar los servicios solicitados por PME",
+            "vigencia": 2024,
+            "idCliente": 1,
+            "cliente": "AIFA",
+            "verificado": false,
+            "activo": true
+        },
+        {
+            "id": 3,
+            "identificador": "PME-AIFA-2024-12",
+            "descripcion": "Establecimiento de los términos y condiciones bajo los cuales el proveedor se obliga a prestar los servicios solicitados por PME",
+            "vigencia": 2023,
+            "idCliente": 1,
+            "cliente": "AIFA",
+            "verificado": true,
+            "activo": true
+        },
+        {
+            "id": 4,
+            "identificador": "PME-AIFA-2023-01",
+            "descripcion": "Establecimiento de los términos y condiciones bajo los cuales el proveedor se obliga a prestar los servicios solicitados por PME",
+            "vigencia": 2023,
+            "idCliente": 1,
+            "cliente": "AIFA",
+            "verificado": true,
+            "activo": true
+        },
+        {
+            "id": 5,
+            "identificador": "PME-AIFA-2022-01",
+            "descripcion": "Establecimiento de los términos y condiciones bajo los cuales el proveedor se obliga a prestar los servicios solicitados por PME",
+            "vigencia": 2022,
+            "idCliente": 1,
+            "cliente": "AIFA",
+            "verificado": true,
+            "activo": true
+        },
+        {
+            "id": 6,
+            "identificador": "PME-AIFA-2022-01",
+            "descripcion": "Establecimiento de los términos y condiciones bajo los cuales el proveedor se obliga a prestar los servicios solicitados por PME",
+            "vigencia": 2022,
+            "idCliente": 1,
+            "cliente": "AIFA",
+            "verificado": true,
+            "activo": false
+        },
+        {
+            "id": 7,
+            "identificador": "PME-AIFA-2021-01",
+            "descripcion": "Establecimiento de los términos y condiciones bajo los cuales el proveedor se obliga a prestar los servicios solicitados por PME",
+            "vigencia": 2021,
+            "idCliente": 1,
+            "cliente": "AIFA",
+            "verificado": true,
+            "activo": false
+        },
+        {
+            "id": 8,
+            "identificador": "PME-AIFA-2021-01",
+            "descripcion": "Establecimiento de los términos y condiciones bajo los cuales el proveedor se obliga a prestar los servicios solicitados por PME",
+            "vigencia": 2021,
+            "idCliente": 1,
+            "cliente": "AIFA",
+            "verificado": true,
+            "activo": false
+        },
+        {
+            "id": 20,
+            "identificador": "PME-AIFA-2021-01",
+            "descripcion": "Establecimiento de los términos y condiciones bajo los cuales el proveedor se obliga a prestar los servicios solicitados por PME",
+            "vigencia": 2021,
+            "idCliente": 1,
+            "cliente": "AIFA",
+            "verificado": true,
+            "activo": false
+        },
+        {
+            "id": 21,
+            "identificador": "PME-AIFA-2021-01",
+            "descripcion": "Establecimiento de los términos y condiciones bajo los cuales el proveedor se obliga a prestar los servicios solicitados por PME",
+            "vigencia": 2021,
+            "idCliente": 1,
+            "cliente": "AIFA",
+            "verificado": true,
+            "activo": false
+        },
+
+        {
+            "id": 9,
+            "identificador": "PME-AICM-2023-01",
+            "descripcion": "Establecimiento de los términos y condiciones bajo los cuales el proveedor se obliga a prestar los servicios solicitados por PME",
+            "vigencia": 2024,
+            "idCliente": 2,
+            "cliente": "AICM",
+            "verificado": true,
+            "activo": true
+        },
+
+        {
+            "id": 10,
+            "identificador": "PME-AICM-2023-01",
+            "descripcion": "Establecimiento de los términos y condiciones bajo los cuales el proveedor se obliga a prestar los servicios solicitados por PME",
+            "vigencia": 2024,
+            "idCliente": 2,
+            "cliente": "AICM",
+            "verificado": true,
+            "activo": true
+        },
+
+        {
+            "id": 11,
+            "identificador": "PME-IMSS-2024-01",
+            "descripcion": "Establecimiento de los términos y condiciones bajo los cuales el proveedor se obliga a prestar los servicios solicitados por PME",
+            "vigencia": 2024,
+            "idCliente": 3,
+            "cliente": "IMSS",
+            "verificado": true,
+            "activo": false
+        },
+
+        {
+            "id": 19,
+            "identificador": "PME-SEGOB-2024-01",
+            "descripcion": "Establecimiento de los términos y condiciones bajo los cuales el proveedor se obliga a prestar los servicios solicitados por PME",
+            "vigencia": 2024,
+            "idCliente": 4,
+            "cliente": "SEGOB",
+            "verificado": true,
+            "activo": true
+        }
+        
+        
+    ]
+}

@@ -24,6 +24,8 @@ import { NavSearchComponent } from './theme/layout/admin/nav-bar/nav-left/nav-se
 import { NavigationItem } from './theme/layout/admin/navigation/navigation';
 import { ToggleFullScreenDirective } from './theme/shared/components/full-screen/toggle-full-screen';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,8 +46,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
     ToggleFullScreenDirective,
 
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, SharedModule, BrowserAnimationsModule,  NgxSpinnerModule.forRoot({ type: 'ball-spin-fade' })],
-  providers: [NavigationItem],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, SharedModule, BrowserAnimationsModule, HttpClientModule, NgxSpinnerModule.forRoot({ type: 'ball-spin-fade' })],
+  providers: [NavigationItem, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

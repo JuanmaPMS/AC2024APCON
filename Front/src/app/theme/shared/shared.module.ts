@@ -47,7 +47,6 @@ import { AlertComponent } from './components/alert/alert.component';
     NgbCollapseModule,
     BreadcrumbsComponent,
     ModalCargaContratoComponent,
-
   ]
 })
 export class SharedModule {}

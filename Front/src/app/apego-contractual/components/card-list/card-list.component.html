@@ -1,0 +1,50 @@
+<div class="col-12 text-right">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+        <div class="col-4">
+            <p><mat-slide-toggle labelPosition="before"
+                class="error-slide-toggle" 
+                [checked]="active" 
+                (change)="onToggle($event)"
+                >Mostrar solo Activos</mat-slide-toggle></p>
+        </div>
+    </div>
+</div>
+
+<!--<mat-grid-list colspan="12" [cols]="breakpoint" (window:resize)="onResize($event)">
+    <mat-grid-tile *ngFor="let contrato of pageList">
+        <div>
+            <app-contrato-card [contrato]="contrato"></app-contrato-card>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>-->
+
+<div class="input-group">
+
+    <input type="text" class="form-control" placeholder="Buscar..."
+     
+     (keyup.enter)="onSearch()" #txtSearchCard>
+    <span class="input-group-text feather icon-search"></span >
+    <span class="input-group-text feather icon-x-circle"></span >
+    <!--<div class="input-group-append">
+        <span class="input-group-text feather icon-search"></span >
+        <span class="input-group-text feather icon-x-circle"></span >
+    </div> -->
+</div>
+
+<mat-divider></mat-divider>
+    <div class="grid col-12 bm-8 pt-2" >
+      <div *ngFor="let contrato of pageList" class="sm:col-5 md:col-4 xl:col-3">
+        <app-contrato-card [contrato]="contrato"></app-contrato-card>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <mat-paginator [length]="lenght"
+        [pageSize]="pageSize"
+        [pageSizeOptions]="pageSizeOption"
+        (page)="onPageChange($event)"
+        [showFirstLastButtons]="true"
+        #paginador
+        ></mat-paginator>
+    

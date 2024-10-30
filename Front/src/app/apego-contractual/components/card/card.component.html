@@ -1,0 +1,17 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{ contrato.identificador }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            {{contrato.descripcion}}
+            <br>
+            Vigencia: {{contrato.vigencia}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions class="d-grid gap-2 d-md-flex justify-content-md-center">
+        <button type="button" [className]="contrato.verificado ? 'btn btn-secondary btn-sm col-5 mx-auto' : 'btn btn-warning btn-sm col-5 mx-auto' ">{{contrato.verificado ? 'Consultar' : 'Falta Verificacion'}}</button>
+        <button type="button" [className]="contrato.activo ? 'btn btn-success btn-sm col-5 mx-auto' : 'btn btn-danger btn-sm col-5 mx-auto' ">{{contrato.activo ? 'Activo' : 'Inactivo'}}</button>
+    </mat-card-actions>
+</mat-card>
+

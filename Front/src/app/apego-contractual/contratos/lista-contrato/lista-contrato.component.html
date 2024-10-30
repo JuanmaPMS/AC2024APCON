@@ -1,17 +1,29 @@
 <div class="row">
   <div class="col-xl-12">
+    <div class="d-inline-flex gap-1">
+      <div *ngFor="let cliente of clientes">
+        <button type="button" class="btn btn-info btn-lg" (click)="getContratos(cliente.id)">
+          {{ cliente.descripcion }}
+        </button>
+      </div>
+    </div>
+    <app-contrato-card-list [contratos]="contratos"></app-contrato-card-list>
+    
+
+
+    <!--
     <app-card cardTitle="Lista contratos" [options]="false" blockClass="table-border-style">
       <div class="row">
         <div class="col-md-8"></div>
         <div class="col-md-4">
-          <div class="input-group">
+          <div class="input-group">-->
           <!--   <select class="form-select" id="inputGroupSelect04">
               <option selected>Choose...</option>
               <option value="1">One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
             </select> -->
-            <input type="text" class="form-control">
+            <!--<input type="text" class="form-control">
             <button class="btn btn-outline-secondary" type="button"><i class="feather icon-search "></i></button>
           </div>
         </div>
@@ -73,5 +85,6 @@
       </nav>
     </div>
     </app-card>
+  -->
   </div>
 </div>
