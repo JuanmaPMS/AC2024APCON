@@ -68,8 +68,10 @@ export class CardListComponent implements OnInit {
   }
 
   onLoadData(data: Contrato[]){
+    //debugger;
     this.pageList = data.slice(0, this.pageSize);
     this.lenght = data.length;
+    this.paginador.firstPage();
   }
 
   onToggle(event: MatSlideToggleChange){
@@ -126,14 +128,15 @@ export class CardListComponent implements OnInit {
     this.onFilter();
   }
 
-  onPageChange(event: PageEvent){   
+  onPageChange(event: PageEvent){  
+    //debugger; 
     this.pageSize = event.pageSize;
     let starIndex = event.pageIndex * event.pageSize;
     let endIndex = starIndex + event.pageSize;
     if(endIndex > this.lenght){
       endIndex = this.lenght;
     }
-    this.pageList = this.contratos.slice(starIndex, endIndex);
+    this.pageList = this.dataFiltered.slice(starIndex, endIndex);
   }
 
   /*onFilterActive(active: boolean): Contrato[]{
