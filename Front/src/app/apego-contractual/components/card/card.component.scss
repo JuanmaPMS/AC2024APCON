@@ -1,9 +1,4 @@
 :host{
-    mat-card-content {
-        background-color: #6194e6;
-        color: #000000;
-        padding: 10px;
-    }
     mat-card-header{
         background-color: #092241;
         color: #ffffff;
@@ -12,14 +7,25 @@
         align-items: center; /* align vertical */
         padding: 10px;
     }
+    mat-card-content {
+        //background-color: #95ABB6;
+        border-left: #95abb6 solid 2px;
+        border-right: #95abb6 solid 2px;
+        color: #000000;
+        padding: 10px;
+    }
+    
     mat-card-actions{
-        background-color: #6194e6;
+        //background-color: #95ABB6;
+        border-bottom: #95abb6 solid 2px;
+        border-left: #95abb6 solid 2px;
+        border-right: #95abb6 solid 2px;
         padding: 10px;
         border-bottom-right-radius: 12px;
         border-bottom-left-radius: 12px;
     }
 }
-
+/*
 .btn-green{
     background-color: #009688;
     color: #ffffff;
@@ -59,3 +65,4 @@
     background-color: #97a4ab;
     color: #ffffff;
 }
+*/

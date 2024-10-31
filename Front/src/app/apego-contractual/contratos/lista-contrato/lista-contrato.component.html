@@ -2,7 +2,7 @@
   <div class="col-xl-12">
     <div class="d-inline-flex col-xl-12">
       <div *ngFor="let cliente of clientes" class="container-fluid">
-        <button type="button" [class]="idSelected == cliente.id ? 'btn btn-client-selected': 'btn btn-client'" (click)="getContratos(cliente.id)">
+        <button type="button" [class]="idSelected == cliente.id ? 'btn btn-info': 'btn btn-secondary'" (click)="getContratos(cliente.id)">
           {{ cliente.descripcion }}
         </button>
       </div>

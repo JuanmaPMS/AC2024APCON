@@ -1,4 +1,10 @@
-.btn-client{
+:host{
+    button{
+        display: block;
+        width: 100%;
+    }
+}
+/*.btn-client{
     background-color: #868788;
     color: #ffffff;
     display: block;
@@ -17,4 +23,4 @@
 }
 .btn-client-selected:hover{
     background-color: #161e28;
-}
+}*/

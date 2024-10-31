@@ -10,8 +10,8 @@
         </p>
     </mat-card-content>
     <mat-card-actions class="d-grid gap-1 d-md-flex justify-content-md-center">
-        <button type="button" [className]="!contrato.activo ? 'btn btn-gray btn-sm col-6 mx-auto' : contrato.verificado ? 'btn btn-green btn-sm col-6 mx-auto' : 'btn btn-yellow btn-sm col-6 mx-auto' ">{{ !contrato.activo ? 'Consultar' : contrato.verificado ? 'Verificado' : 'Falta Verificacion'}}</button>
-        <button type="button" [className]="contrato.activo ? 'btn btn-green btn-sm col-6 mx-auto' : 'btn btn-red btn-sm col-6 mx-auto' ">{{contrato.activo ? 'Activo' : 'Inactivo'}}</button>
+        <button type="button" [className]="!contrato.activo ? 'btn btn-secondary btn-sm col-6 mx-auto' : contrato.verificado ? 'btn btn-success btn-sm col-6 mx-auto' : 'btn btn-warning btn-sm col-6 mx-auto' ">{{ !contrato.activo ? 'Consultar' : contrato.verificado ? 'Verificado' : 'Falta Verificacion'}}</button>
+        <button type="button" [className]="contrato.activo ? 'btn btn-success btn-sm col-6 mx-auto' : 'btn btn-danger btn-sm col-6 mx-auto' ">{{contrato.activo ? 'Activo' : 'Inactivo'}}</button>
     </mat-card-actions>
 </mat-card>
 
