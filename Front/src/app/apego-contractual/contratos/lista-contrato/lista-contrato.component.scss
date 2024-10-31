@@ -1,0 +1,20 @@
+.btn-client{
+    background-color: #868788;
+    color: #ffffff;
+    display: block;
+    width: 100%;
+}
+.btn-client:hover{
+    background-color: #7a7a7b;
+}
+
+.btn-client-selected{
+    background-color: #092241;
+    color: #ffffff;
+    font-weight:500;
+    display: block;
+    width: 100%;
+}
+.btn-client-selected:hover{
+    background-color: #161e28;
+}

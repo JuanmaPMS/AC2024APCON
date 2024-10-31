@@ -18,6 +18,10 @@ import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 export class CardListComponent implements OnInit {
   @Input()
   public contratos: Contrato[];
+  @ViewChild('ddlInicioVigencia')
+  public tagInicio!: ElementRef<HTMLSelectElement>
+  @ViewChild('ddlFinVigencia')
+  public tagFin!: ElementRef<HTMLSelectElement>
   @ViewChild('txtSearchCard')
   public tagInput!: ElementRef<HTMLInputElement>
   @ViewChild(MatPaginator) paginador: MatPaginator;
@@ -27,8 +31,12 @@ export class CardListComponent implements OnInit {
   public dataFiltered: Contrato[] = [];
   public lenght: number = 0;
   public pageSize: number = 4;
-  public pageSizeOption: number[] = [4,8,12];
+  public pageSizeOption: number[] = [4, 8, 12];
+  //Filtros
   public active: boolean = false;
+  public searching: boolean = false;
+  public inicio:number[] = [];
+  public fin:number[] = [];
 
   constructor(private contratosService: ContratoService) {}
 
@@ -38,18 +46,29 @@ export class CardListComponent implements OnInit {
 
   ngOnChanges(changes: SimpleChanges): void {
     this.onLoad();
+    this.getYears();
   }
 
   onLoad(){
-    this.paginador.firstPage();
-    this.paginador.pageSize = 4;
+    if(this.paginador!){
+      this.paginador.firstPage();
+      this.paginador.pageSize = 4;
+    } 
+    if(this.tagInput!) {this.tagInput.nativeElement.value = '';}
+    if(this.tagInicio!) {this.tagInicio.nativeElement.selectedIndex = 0;}
+    if(this.tagFin!) {this.tagFin.nativeElement.selectedIndex = 0;}
+    this.pageSize = 4;
     this.active = false;
-    this.tagInput.nativeElement.value = '';
     this.onFilter();
   }
 
+  getYears(){
+    this.inicio = Array.from(new Set(this.contratos.map(r => new Date(this.parseDate(r.inicioVigencia)).getFullYear()))).sort(); 
+    this.fin = Array.from(new Set(this.contratos.map(r => new Date(this.parseDate(r.finVigencia)).getFullYear()))).sort();
+  }
+
   onLoadData(data: Contrato[]){
-    this.pageList = data.slice(0, 4);
+    this.pageList = data.slice(0, this.pageSize);
     this.lenght = data.length;
   }
 
@@ -59,8 +78,11 @@ export class CardListComponent implements OnInit {
   }
 
   onFilter(){
+    //debugger;
     this.dataFiltered = this.contratos;
-    const search = this.tagInput.nativeElement.value; 
+    const search = this.tagInput! ? this.tagInput.nativeElement.value:''; 
+    const ddlIndexIni = this.tagInicio! ? this.tagInicio.nativeElement.selectedIndex: 0;
+    const ddlIndexFin = this.tagFin! ? this.tagFin.nativeElement.selectedIndex: 0;
     //Si solo quieren activos
     if(this.active){
       this.dataFiltered = this.dataFiltered.filter(x => x.activo === true);
@@ -69,6 +91,16 @@ export class CardListComponent implements OnInit {
       this.dataFiltered = this.dataFiltered.filter(o => 
         Object.keys(o).some(k => String(o[k]).toLowerCase().includes(search.toLocaleLowerCase()))
       );
+    }
+    if(ddlIndexIni > 0){
+      var yearInicio = Number(this.tagInicio.nativeElement.value);
+      this.dataFiltered = this.dataFiltered.filter(x => 
+        this.parseDate(x.inicioVigencia).getFullYear() === yearInicio);
+    }
+    if(ddlIndexFin > 0){
+      var yearFin = Number(this.tagFin.nativeElement.value);
+      this.dataFiltered = this.dataFiltered.filter(x => 
+        this.parseDate(x.finVigencia).getFullYear() === yearFin);
     }
 
     //Lee data
@@ -79,7 +111,23 @@ export class CardListComponent implements OnInit {
     this.onFilter();
   }
 
+  onSearching(){
+    const txt = this.tagInput.nativeElement.value;
+    if(txt.length > 0){
+      this.searching = true;
+    } else {
+      this.searching = false;
+    }
+  }
+
+  onClear(){
+    this.tagInput.nativeElement.value = '';
+    this.searching = false;
+    this.onFilter();
+  }
+
   onPageChange(event: PageEvent){   
+    this.pageSize = event.pageSize;
     let starIndex = event.pageIndex * event.pageSize;
     let endIndex = starIndex + event.pageSize;
     if(endIndex > this.lenght){
@@ -98,5 +146,11 @@ export class CardListComponent implements OnInit {
 
   onResize(event){
     //this.breakpoint = (event.target.innerWidth <= 800) ? 1: 4;
+  }
+
+  parseDate(fecha: Date): Date{
+    var extract = String(fecha).split('/');
+    var newDate = extract[1] + '/' + extract[0] + '/' + extract[2];
+    return new Date(newDate);
   }
 }

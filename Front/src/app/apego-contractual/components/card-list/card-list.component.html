@@ -1,8 +1,46 @@
-<div class="col-12 text-right">
-    <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4"></div>
-        <div class="col-4">
+<mat-divider></mat-divider>
+<div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        <div class="col">
+            <div class="col-md">
+                <div class="form-floating">
+                    <select class="form-select" id="ddlInicioVigencia" (change)="onSearch()" #ddlInicioVigencia>
+                        <option selected>Seleccione</option>
+                        @for(year of inicio; track year){
+                          <option [value]="year">{{ year }}</option>
+                        }
+                    </select>
+                    <label for="ddlInicioVigencia">Inicio de vigencia:</label>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-md">
+                <div class="form-floating">
+                    <select class="form-select" id="ddlFinVigencia" (change)="onSearch()" #ddlFinVigencia>
+                        <option selected>Seleccione</option>
+                        @for(year of fin; track year){
+                            <option [value]="year">{{ year }}</option>
+                          }
+                    </select>
+                    <label for="ddlFinVigencia">Fin de vigencia:</label>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Buscar..." 
+                 (keyup)="onSearching()"
+                 (keyup.enter)="onSearch()" #txtSearchCard>
+                <span *ngIf="!searching" class="input-group-text feather icon-search" (click)="onSearch()"></span >
+                <span *ngIf="searching" class="input-group-text feather icon-x-circle" (click)="onClear()"></span >
+                <!--<div class="input-group-append">
+                    <span class="input-group-text feather icon-search"></span >
+                    <span class="input-group-text feather icon-x-circle"></span >
+                </div> -->
+            </div>
+        </div>
+        <div class="col">
             <p><mat-slide-toggle labelPosition="before"
                 class="error-slide-toggle" 
                 [checked]="active" 
@@ -20,18 +58,7 @@
     </mat-grid-tile>
 </mat-grid-list>-->
 
-<div class="input-group">
 
-    <input type="text" class="form-control" placeholder="Buscar..."
-     
-     (keyup.enter)="onSearch()" #txtSearchCard>
-    <span class="input-group-text feather icon-search"></span >
-    <span class="input-group-text feather icon-x-circle"></span >
-    <!--<div class="input-group-append">
-        <span class="input-group-text feather icon-search"></span >
-        <span class="input-group-text feather icon-x-circle"></span >
-    </div> -->
-</div>
 
 <mat-divider></mat-divider>
     <div class="grid col-12 bm-8 pt-2" >

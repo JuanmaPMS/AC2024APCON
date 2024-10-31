@@ -18,6 +18,7 @@ export default class ListaContratoComponent implements OnInit {
   
   public clientes: Catalogo[] = [];
   public contratos: Contrato[] = [];
+  public idSelected: number = 0;
   
 
   constructor(private clientesService: ClienteService,
@@ -37,6 +38,7 @@ export default class ListaContratoComponent implements OnInit {
   }
 
   getContratos(idCliente: number){
+    this.idSelected = idCliente;
     this.contratosService.getContratosByCliente(idCliente).subscribe(data => this.contratos = data);
   }
 

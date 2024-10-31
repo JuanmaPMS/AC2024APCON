@@ -7,7 +7,7 @@ import { MaterialModule } from 'src/app/material/material.module';
   standalone: true,
   imports: [MaterialModule],
   templateUrl: './card.component.html',
-  styles: ``
+  styleUrl: './card.component.scss'
 })
 export class CardComponent implements OnInit {
   @Input()
