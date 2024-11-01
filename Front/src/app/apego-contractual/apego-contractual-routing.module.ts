@@ -33,6 +33,10 @@ const routes: Routes = [
         path: 'contrato-desglose',
         loadComponent: () => import('./contratos/desglose-contrato/desglose-contrato.component')
       },
+      {
+        path: 'desglose-detalle',
+        loadComponent: () => import('./contratos/desglose-detalle-contrato/desglose-detalle-contrato.component')
+      },
     ]
   }
 ];

@@ -1,0 +1,41 @@
+<app-header-title [contrato]="contrato" [cliente]="cliente"></app-header-title>
+<br>
+<div class="row justify-content-center">
+    <div class="col-md-8 align-self-center">
+        <p>
+            Por favor, seleccione las obligaciones que considere que no debió recomendar el 
+            sistema IA. Las obligaciones que descarte, se pintaran en color rojo.
+        </p>
+    </div>
+</div>
+<br>
+<div class="row justify-content-center">
+    <div class="col-md-8 align-self-center">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+            <ng-container matColumnDef="descripcion">
+              <th mat-header-cell *matHeaderCellDef>{{tipo}} encontradas en el {{documento}}</th>
+              <td mat-cell *matCellDef="let element">{{element.descripcion}}</td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr
+                mat-row
+                (click)="onClicked(row)"
+                [class.demo-row-is-clicked]="clickedRows.has(row)"
+                *matRowDef="let row; columns: displayedColumns;"
+            ></tr>
+        </table>
+        <mat-paginator 
+            [pageSize]="5"
+            [pageSizeOptions]="[5, 10, 15, 20]"
+            [showFirstLastButtons]="true" #paginador></mat-paginator>
+    </div>
+</div>
+
+<div class="row justify-content-center" >
+    <div class="col-md-8" style="text-align: right;">
+        <button type="button" class="btn btn-danger">Cancelar</button>
+        <button type="button" class="btn btn-primary">Guardar Selección</button>
+        <button type="button" class="btn btn-success">Guardar Todo</button>
+    </div>
+</div>

@@ -13,6 +13,7 @@ import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginato
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatTableModule } from '@angular/material/table';
 import { PaginatorTranslation } from './paginator-translation';
 
 
@@ -30,7 +31,8 @@ import { PaginatorTranslation } from './paginator-translation';
     MatPaginatorModule,
     MatSelectModule,
     MatSnackBarModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatTableModule
   ], 
   providers: [
     {

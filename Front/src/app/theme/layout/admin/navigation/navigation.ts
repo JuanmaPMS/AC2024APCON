@@ -73,6 +73,12 @@ const NavigationItems = [
             title: 'Reportes',
             type: 'item',
             url: ''
+          },
+          {
+            id: 'desglose-detalle',
+            title: 'Desglose detalle',
+            type: 'item',
+            url: '/apego/desglose-detalle'
           }
         ]
       }
