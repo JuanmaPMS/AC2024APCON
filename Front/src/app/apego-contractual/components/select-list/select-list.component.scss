@@ -9,6 +9,17 @@
     width: 100%;
 }
 
+.mat-mdc-header-cell{
+    text-align:center;
+    font-size: 12pt;
+    font-weight: 500;
+}
+/*
+.mat-mdc-cell{
+    text-align:center;
+    justify-content: center;
+}*/
+
 .mat-mdc-header-row{
     background-color: #092241;
     color: #ffffff;
@@ -22,7 +33,7 @@
 
 .mat-mdc-row:hover .mat-mdc-cell {
     //border-color: currentColor;
-    background-color: #fee1e1;
+    background-color: #abb2b9;
 }
 
 /*.mat-mdc-row:nth-child(even){
@@ -35,5 +46,6 @@
   
 .demo-row-is-clicked {
     font-weight: bold;
-    background-color: #fe7e7e;
+    background-color:  #85929e !important;
+    text-decoration: line-through;
 }

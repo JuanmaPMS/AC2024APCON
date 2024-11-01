@@ -25,17 +25,18 @@
                 *matRowDef="let row; columns: displayedColumns;"
             ></tr>
         </table>
-        <mat-paginator 
-            [pageSize]="5"
-            [pageSizeOptions]="[5, 10, 15, 20]"
-            [showFirstLastButtons]="true" #paginador></mat-paginator>
+        <mat-paginator app-bubble-pagination
+            [pageSize]="10"
+            [appCustomLength]="dataSource.data.length"
+            [length]="dataSource.data.length"
+            #paginador></mat-paginator>
     </div>
 </div>
 
 <div class="row justify-content-center" >
     <div class="col-md-8" style="text-align: right;">
         <button type="button" class="btn btn-danger">Cancelar</button>
-        <button type="button" class="btn btn-primary">Guardar Selección</button>
-        <button type="button" class="btn btn-success">Guardar Todo</button>
+        <button type="button" class="btn btn-primary" (click)="onSaveSelect()">Guardar Selección</button>
+        <button type="button" class="btn btn-success" (click)="onSaveAll()">Guardar Todo</button>
     </div>
 </div>

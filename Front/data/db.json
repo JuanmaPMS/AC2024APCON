@@ -298,6 +298,122 @@
         },
         {
             "descripcion": "Estas son obligaciones comunes, pero es importante adaptar el contrato a las necesidades y especificaciones de cada proyecto para evitar posibles conflictos."
+        },{
+            "descripcion": "Asignar personal de acuerdo a los tiempos."
+        },
+        {
+            "descripcion": "Asignar personal de acuerdo a los tiempos."
+        },
+        {
+            "descripcion": "Desarrollar y entregar el sitio web."
+        },
+        {
+            "descripcion": "Completar el desarrollo del sitio web conforme a los requerimientos y especificaciones acordadas (funcionalidades, diseño, estructura, etc.)."
+        },
+        {
+            "descripcion": "Cumplir con los plazos de entrega."
+        },
+        {
+            "descripcion": "Realizar el desarrollo y la entrega del proyecto en las fechas estipuladas. Cualquier cambio en los plazos debe ser informado y aprobado por ambas partes."
+        },
+        {
+            "descripcion": "Garantizar la calidad del código y del diseño."
+        },
+        {
+            "descripcion": "Asegurar que el código sea de alta calidad, funcional y que el diseño sea profesional y cumpla con los estándares de usabilidad y accesibilidad."
+        },
+        {
+            "descripcion": "Realizar pruebas de funcionalidad y seguridad."
+        },
+        {
+            "descripcion": "Llevar a cabo pruebas para detectar errores y vulnerabilidades en el sitio web antes de su lanzamiento."
+        },
+        {
+            "descripcion": "Ofrecer soporte técnico y mantenimiento."
+        },
+        {
+            "descripcion": "Proporcionar soporte técnico para solucionar errores y garantizar el correcto funcionamiento del sitio, al menos durante el periodo inicial acordado."
+        },
+        {
+            "descripcion": "Entrenamiento y capacitación."
+        },
+        {
+            "descripcion": "Si se establece, capacitar al cliente o a su equipo en el uso y administración del sitio web (por ejemplo, gestión de contenidos o uso del CMS)."
+        },
+        {
+            "descripcion": "Transferencia de derechos de propiedad intelectual."
+        },
+        {
+            "descripcion": "Entregar la propiedad del código y los elementos desarrollados, si el contrato establece una transferencia de propiedad al cliente."
+        },
+        {
+            "descripcion": "Mantener la confidencialidad."
+        },
+        {
+            "descripcion": "Asegurar que la información confidencial del cliente no será divulgada ni usada para fines diferentes a los estipulados en el contrato."
+        },
+        {
+            "descripcion": "Realizar ajustes menores."
+        },
+        {
+            "descripcion": "Aceptar realizar modificaciones menores solicitadas por el cliente que no impliquen cambios significativos en el alcance del proyecto."
+        },
+        {
+            "descripcion": "Definir claramente los requerimientos del proyecto."
+        },
+        {
+            "descripcion": "Proporcionar todas las especificaciones y detalles necesarios para el desarrollo del sitio web, incluyendo funcionalidades, diseño y contenido deseado."
+        },
+        {
+            "descripcion": "Proporcionar el contenido y material necesario."
+        },
+        {
+            "descripcion": "Entregar textos, imágenes, videos y cualquier material que se requiera para el desarrollo y que sea responsabilidad del cliente."
+        },
+        {
+            "descripcion": "Cumplir con los pagos acordados."
+        },
+        {
+            "descripcion": "Realizar los pagos en los montos y plazos acordados según el cronograma de pago establecido en el contrato."
+        },
+        {
+            "descripcion": "Proporcionar acceso a sistemas externos."
+        },
+        {
+            "descripcion": "Si es necesario, permitir al desarrollador el acceso a servidores, servicios de terceros o herramientas para completar el trabajo."
+        },
+        {
+            "descripcion": "Revisar y aprobar avances y entregas parciales."
+        },
+        {
+            "descripcion": "Supervisar el progreso del desarrollo, aprobando las fases intermedias del proyecto para evitar malentendidos en etapas posteriores."
+        },
+        {
+            "descripcion": "Responder oportunamente a las consultas."
+        },
+        {
+            "descripcion": "Brindar retroalimentación y resolver dudas del prestador de servicios en tiempos adecuados para no retrasar el proyecto."
+        },
+        {
+            "descripcion": "Evitar interferencias."
+        },
+        {
+            "descripcion": "No realizar cambios en el proyecto o el código entregado sin la autorización del desarrollador durante la fase de desarrollo."
+        },
+        {
+            "descripcion": "Mantener la confidencialidad."
+        },
+        {
+            "descripcion": "Asegurar que la información sobre el desarrollador y sus procesos de trabajo no sea divulgada sin autorización, si así se establece en el contrato."
+        },
+        {
+            "descripcion": "Gestionar el sitio web post-lanzamiento (si aplica)."
+        },
+        {
+            "descripcion": "Si el soporte no está incluido en el contrato, el cliente se hace responsable de la administración y mantenimiento del sitio después de su entrega."
+        },
+        {
+            "descripcion": "Estas son obligaciones comunes, pero es importante adaptar el contrato a las necesidades y especificaciones de cada proyecto para evitar posibles conflictos."
         }
 
     ]
